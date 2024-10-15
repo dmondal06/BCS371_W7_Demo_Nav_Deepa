@@ -93,8 +93,9 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             Text("Go To activity 2", Modifier.padding(start = 10.dp))
         }
 
+        HorizontalDivider(thickness = DividerDefaults.Thickness)
         // ToDo 3:Done Change the spacing between the icons and text to be 10dp
-        // ToDo 4: Add a horizontal divider between the buttons
+        // ToDo 4:Done Add a horizontal divider between the buttons
 
 
         // ToDo 5: This switch is not working fix it
