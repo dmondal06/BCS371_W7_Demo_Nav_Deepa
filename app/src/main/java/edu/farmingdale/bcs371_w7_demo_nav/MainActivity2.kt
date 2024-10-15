@@ -61,8 +61,7 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             newInt.setData(Uri.parse("geo:0,0?q=Farmingdale State College, NY"))
             context.startActivity(newInt)
         },
-            enabled = checkswitch,
-            modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
+            modifier= Modifier.padding(start = 40.dp, end = 40.dp), enabled = checkswitch) {
             Icon( imageVector = Icons.Default.LocationOn, contentDescription = "Location")
             Text("Show me  Farmingdale",  Modifier.padding(start = 10.dp))
         }
@@ -74,8 +73,8 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             newInt.setData(Uri.parse("tel:+9999999999"))
             context.startActivity(newInt)
         },
-            enabled = checkswitch,
-            modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
+
+            modifier= Modifier.padding(start = 40.dp, end = 40.dp), enabled = checkswitch) {
             Icon( imageVector = Icons.Default.Phone, contentDescription = "Phone")
             Text("Call Me" ,Modifier.padding(start = 10.dp))
         }
@@ -88,9 +87,9 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             context.startActivity(Intent(context, MainActivity2::class.java))
             
         },
-            enabled = checkswitch,
+
             modifier= Modifier
-                .padding(start = 40.dp, end = 40.dp))
+                .padding(start = 40.dp, end = 40.dp), enabled = checkswitch)
 
         {
             Icon( imageVector = Icons.Default.Info, contentDescription = "Phone")
