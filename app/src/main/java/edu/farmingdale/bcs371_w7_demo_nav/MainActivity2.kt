@@ -52,6 +52,7 @@ class MainActivity2 : ComponentActivity() {
 @Composable
 fun BasicOperations(name: String, modifier: Modifier = Modifier) {
     val  context = LocalContext.current
+    var checkswitch by remember { mutableStateOf(true) }
 
     Column {
         Spacer(modifier = Modifier.padding(50.dp))
@@ -60,6 +61,7 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             newInt.setData(Uri.parse("geo:0,0?q=Farmingdale State College, NY"))
             context.startActivity(newInt)
         },
+            enabled = checkswitch,
             modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
             Icon( imageVector = Icons.Default.LocationOn, contentDescription = "Location")
             Text("Show me  Farmingdale",  Modifier.padding(start = 10.dp))
@@ -72,6 +74,7 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             newInt.setData(Uri.parse("tel:+9999999999"))
             context.startActivity(newInt)
         },
+            enabled = checkswitch,
             modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
             Icon( imageVector = Icons.Default.Phone, contentDescription = "Phone")
             Text("Call Me" ,Modifier.padding(start = 10.dp))
@@ -85,6 +88,7 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
             context.startActivity(Intent(context, MainActivity2::class.java))
             
         },
+            enabled = checkswitch,
             modifier= Modifier
                 .padding(start = 40.dp, end = 40.dp))
 
@@ -98,13 +102,14 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
         // ToDo 4:Done Add a horizontal divider between the buttons
 
 
-        // ToDo 5: This switch is not working fix it
+        // ToDo 5: Done This switch is not working fix it
+
         Switch(
             checked = true,
-            onCheckedChange = {  },
+            onCheckedChange = { checkswitch=it },
             modifier = Modifier.padding(10.dp),
         )
-        // ToDo 6: when the switch is off, disable the buttons
+        // ToDo 6: Done when the switch is off, disable the buttons
     }
 
 
