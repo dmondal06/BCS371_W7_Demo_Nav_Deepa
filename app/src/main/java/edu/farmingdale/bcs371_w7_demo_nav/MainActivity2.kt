@@ -81,7 +81,8 @@ fun BasicOperations(name: String, modifier: Modifier = Modifier) {
 
         Button( onClick = {
 
-            // ToDo 2: create explicit intent to open a new activity
+            // ToDo 2: Done create explicit intent to open a new activity
+            context.startActivity(Intent(context, MainActivity2::class.java))
             
         },
             modifier= Modifier.padding(start = 40.dp, end = 40.dp)) {
