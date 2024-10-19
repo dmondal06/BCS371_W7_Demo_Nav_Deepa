@@ -6,9 +6,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
-// ToDo 10: make this composable navigable and then add a button to navigate to a suitable screen
+// ToDo 10: Done make this composable navigable and then add a button to navigate to a suitable screen
 
 @Composable
 fun GpaAppFun(navController: NavController) {
@@ -82,7 +83,12 @@ fun GpaAppFun(navController: NavController) {
             Text(text = "GPA: $gpa")
         }
 
+        Spacer(modifier = Modifier.height(16.dp)) // Add space for better layout
 
+        // Button to navigate to another screen (e.g., back to the first screen)
+        Button(onClick = { navController.navigate("first_screen") }) {
+            Text("Go to First Screen")
+        }
     }
 }
 
