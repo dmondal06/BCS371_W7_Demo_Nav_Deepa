@@ -62,9 +62,10 @@ fun Navigation() {
             SecondScreen(navController)
         }
 
-        composable("PizzaPartyScreen"){
+        composable("PizzaPartyScreen") {
             PizzaPartyScreen(navController)
         }
+
         composable("GpaCalculatorScreen") {
             GpaAppFun(navController)
         }
